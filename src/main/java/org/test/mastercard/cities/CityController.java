@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,6 +30,7 @@ public class CityController {
 		System.out.println(destination);
 		
 		map = cityService.readCityConnections("C:\\Users\\admin\\Downloads\\MasterCard\\MasterCard\\src\\main\\resources\\static\\city.txt");
+		System.out.println(map);
 		flag = cityService.checkConnection(map, origin, destination);
 		
 		if(flag==true) {

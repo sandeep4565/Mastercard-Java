@@ -3,7 +3,6 @@ package org.test.mastercard.cities;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.Reader;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -17,9 +16,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class CityService {
 	
+	public Map<String, Set<String>> cityConnectionList = new HashMap<String, Set<String>>();
+	
 	public Map<String, Set<String>> readCityConnections(String cityFile) throws IOException{
 		
-		Map<String, Set<String>> cityConnectionList = new HashMap<String, Set<String>>();
+//		Map<String, Set<String>> cityConnectionList = new HashMap<String, Set<String>>();
 		BufferedReader bufferedReader = null;
 		
 		try {
